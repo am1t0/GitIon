@@ -1,0 +1,89 @@
+.teamCreate{
+    /* border: 2px solid; */
+    background: #0D1117;
+    height: 92vh;
+    width: 100%;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+}
+
+.teamInpBox{
+    border: 1px solid rgb(71, 69, 69);
+    border-radius: 5px;
+    height: 30rem;
+    width: 28rem;
+    padding: 0px 0px 20px 0px;
+}
+.teamInpBox h3{
+    text-align: center;
+    margin-bottom: 13px;
+    padding-bottom: 10px;
+    border-radius: 4px 4px 0px 0px;
+    /* color: gold; */
+    background: rebeccapurple;
+    box-shadow: 1px 1px 6px rebeccapurple;
+    border-bottom: 1px solid rgb(86, 85, 85);
+}
+.teamInpBox p{
+    text-align: center;
+    margin-bottom: 13px;
+}
+.teamInpBox form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.teamInp{
+    /* outline: 1px solid; */
+    width: 90%;
+}
+
+.teamInp input,textarea{
+    width: 100%;
+    background: black;
+    outline: 1px solid rgb(78, 78, 78);
+    border-radius: 4px;
+    margin-top: 6px;
+    padding: 18px 10px;
+    color: rgb(205, 203, 203);
+}
+
+.teamInp input:focus, textarea:focus{
+    outline: 2px solid rgb(42, 42, 231);
+}
+
+.genBtn{
+    width: 11rem;
+    border: none;
+    margin: 5px 10px;
+    padding: 6px 8px;
+    border-radius: 3px;
+}
+
+.cancelBtn{
+    background: gray;
+}
+.createBtn{
+    background: rgb(46, 46, 249);
+}
+
+.info{
+    /* outline: 1px solid; */
+   width: 50%;
+   padding: 0px 20px;
+   text-align: center;
+}
+
+.teamImg{
+    /* outline: 1px solid; */
+    padding: 20px 0px;
+    display: flex;
+    justify-content: center;
+}
+.teamImg img{
+    height: 220px;
+    width: 350px;
+}

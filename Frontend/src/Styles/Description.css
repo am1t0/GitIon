@@ -1,0 +1,12 @@
+.descCrt{
+    padding-left: 30px;
+    margin-top: 13px;
+    display: flex;
+    /* border: 1px solid; */
+    align-items: center;
+    gap: 10px;
+}
+.descCrt p{
+    margin: 0;
+    color: rgb(187, 187, 187);
+}

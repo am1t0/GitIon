@@ -1,0 +1,37 @@
+#searchList{
+    /* border: 1px solid rgb(83, 83, 83); */
+    border-radius: 4px;
+    width: 20%;
+    position: absolute;
+    background: rgb(69, 69, 69);
+    z-index: 1;
+    right: 400px;
+    padding: 3px 20px 3px 14px;
+}
+#matchedMemb{
+    /* border: 1px solid; */
+    display: flex;
+    gap: 8px;
+    outline: 1px solid rgb(100, 99, 99);
+    margin: 6px 1px;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+#matchedMemb:hover{
+    background: rgb(57, 57, 57);
+}
+
+#matchedMemb li{
+
+}
+
+.circle{
+    border-radius: 40px;
+    height: 24px;
+    width: 24px;
+    display: flex;
+    font-size: 12px;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid rgb(255, 255, 255); */
+}

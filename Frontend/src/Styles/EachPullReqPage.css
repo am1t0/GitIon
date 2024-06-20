@@ -1,0 +1,110 @@
+.eachPull{
+ /* outline: 1px solid; */
+ margin-top: 34px;
+}
+.pullTop{
+    /* outline: 1px solid; */
+    display: flex;
+}
+
+.state{
+   /* outline: 1px solid gray; */
+   border-radius: 4px;
+   background: green;
+   padding: 4px;
+}
+.state i{
+    margin: 0px 4px;
+}
+.aim{
+    display: flex;
+    align-items: center;
+    margin-left: 10px;
+}
+.aim h6{
+    margin:2px 5px;
+}
+
+.pullComment{
+    outline: 1px solid rgb(69, 68, 68);
+    border-radius: 4px;
+    margin-top: 8px;
+    padding: 10px;
+}
+
+.commits{
+    /* outline: 1px solid; */
+    display: flex;
+    padding-left: 20px;
+    align-items: center;
+    gap: 10px;
+}
+
+.commitList{
+   /* outline: 1px solid; */
+   margin-top: 20px;
+}
+.commits{
+    margin-bottom: 5px;
+}
+.commits i{
+    color: rgb(165, 165, 165);
+    font-size: 14px;
+}
+.commits li{
+    color: gray;
+    font-size: 13px;
+}
+
+.mergeCond{
+    outline: 1px solid rgb(91, 87, 87);
+    padding: 20px 10px;
+    border-radius: 5px;
+}
+.mergeState{
+    margin-bottom: 10px;
+}
+.mergeState h6{
+    margin: 0;
+}
+.Mbtn{
+    border: none;
+    padding: 2px 5px;
+    border-radius: 4px;
+}
+.notDisable{
+    background-color: rgb(10, 164, 10);
+    cursor: not-allowed;
+}
+.disable{
+    background-color: rgb(92, 89, 89);
+}
+
+.conflictsOrNot{
+ /* border: 1px solid red; */
+ display: flex;
+ align-items: center;
+}
+.conflictsOrNot i{
+    font-size: 20px;
+    padding: 8px;
+    border-radius: 20px;
+}
+
+.no-conflict-i{
+    background: green;
+}
+.conflict-i{
+    background: red;
+}
+.conflictsOrNot h6{
+    font-size: 17px;
+    margin-left: 10px;
+}
+
+.addComment{
+    margin-top: 10px;
+}
+.addComment textarea{
+    height: 100px;
+}

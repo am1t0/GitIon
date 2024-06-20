@@ -1,0 +1,31 @@
+
+
+.commitDate{
+    /* outline: 1px solid; */
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    gap: 10px;
+}
+.commitDate p{
+   margin: 0;
+}
+.commitDate i{
+    color: gray;
+}
+
+.eachCommit{
+    outline: 1px solid rgb(85, 85, 85);
+    border-radius: 8px;
+    padding: 2px 0px;
+    margin-top: 18px;
+    margin-left: 20px;
+}
+
+.eachCommit li{
+    padding: 2px 10px;
+}
+
+.eachCommit li:not(:last-child){
+    border-bottom: 1px solid rgb(85, 85, 85);
+}

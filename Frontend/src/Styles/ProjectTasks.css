@@ -1,0 +1,407 @@
+#tasks{
+    background-color: #080b0e;
+    width: 100%;
+    min-height:80vh ;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* border: 2px solid red; */
+    font-size: 14px;
+    /* margin-left: 30px; */
+  }
+  #notFill{
+   position: absolute;
+   z-index: 111;
+   margin-left: 1px;
+   width: 82%;
+   border-radius: 0px;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* text-align: center; */
+  }
+  #notFill h6{
+    color: black;
+    margin: 0;
+  }
+#cnl{
+  display: flex;
+  align-items: center;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all .1s ease;
+}
+ #cnl i{
+    color: black;
+    padding: 3px;
+ }
+
+#cnl:hover{
+  background: grey;
+}
+
+  #themeImg {
+    /* border: 2px solid; */
+    background: rgba(20, 0, 195, 0.1);
+    height: 20vh;
+    overflow: hidden;
+    position: relative;  /* Add this to ensure absolute positioning works within this container */
+  }
+  
+  #thm-load{          /* centering the loader when image is uploading  */
+    position: relative;
+    top: 80px;
+    left: 560px;
+    height: 40px;
+    width: 40px;
+    color: rebeccapurple;
+  }
+  #themeImg img {
+    width: 100%;
+    /* height: 100%; Ensure the image covers the full height of the container */
+    /* object-fit: cover; /*Ensure the image maintains aspect ratio */
+  }
+  
+  .changeThm {
+    position: absolute;
+    z-index: 11;
+    width: 100%;  /* Use full width */
+    height: 100%; /* Use full height */
+    opacity: 0;
+    background: rgba(20, 0, 195, 0.1);
+    transition: opacity 0.1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 0;  /* Position at the top */
+    left: 0; /* Position at the left */
+  }
+  
+  #themeImg:hover .changeThm {
+    opacity: 1;
+  }
+  
+  .changeThm p {
+    margin: 0;
+    color: white; /* Ensure the text is visible */
+    position: absolute;
+    font-weight: 500;
+  }
+  
+  .changeThm input {
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+  
+  .tasktable{
+    overflow-x: auto;
+    padding: 10px 20px;
+  }
+  .manp{
+    /* outline: 1px solid; */
+    padding: 2px  10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+  }
+ .taskCube{
+  display: flex;
+ }
+ .taskCube h3{
+  margin: 0px;
+  font-weight:bolder;
+  color: rgb(230, 230, 230);
+ }
+ .taskCube i{
+    color: rgb(227, 227, 8);
+    margin-right: 8px;
+    margin-top: 4px;
+ }
+
+ .viewOp{
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+ /* border: 1px solid; */
+ width: 350px;
+ }
+ .srch{
+  display: flex;
+  align-items: center;
+  border: 1px solid rgb(71, 71, 71);
+  padding: 0px 10px;
+  border-radius: 40px;
+ }
+ .srch i{
+  padding: 1px;
+ }
+ .icns{
+  display: flex;
+  align-items: center;
+ }
+ .icns i{
+  color: rgb(219, 219, 219);
+  margin: 4px;
+  cursor: pointer;
+ }
+.icns i:hover{
+   color: grey;
+}
+ tr{
+  cursor: pointer;
+ }
+ #hd{
+  /* border: 2px solid; */
+  padding-left: 5px;
+  font-weight: 600;
+  color: rgb(218, 218, 218);
+ }
+ #hd i{
+  margin: 0px 8px;
+  color: rgb(145, 145, 145);
+ }
+  /* GENERAL BLOCKS STYLE  */
+  td,th{
+    border: 1px solid rgb(72, 71, 71);
+    font-size: 14px;
+    padding: 7px 8px;
+  }
+
+  /* TASK MANIPULATION style */
+#taskM{
+  /* border: 2px solid; */
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+  display: flex;
+  gap: 3px;
+}
+#taskM p{
+  margin: 0;
+  padding-left: 5px;
+  font-weight: 600;
+  color: rgb(126, 126, 126);
+  /* font-size: 12px; */
+   /* padding */
+  /* border: 2px solid red; */
+}
+
+/* EDIT AND DELETE OPTIONS  STYLE */
+#hovOp{
+  display: none;
+  position: relative;
+  padding-right: 10px;
+  /* border: 2px solid; */
+}
+#hovOp i{
+  cursor: pointer;
+  /* border: 2px solid; */
+  background: rebeccapurple;
+  border-radius: 5px;
+  padding: 4px;
+  /* color: red; */
+}
+#hovOp i:hover{
+  background: rgb(81, 32, 130);
+}
+#hovOp i:active{
+  background: rgb(49, 13, 84);
+}
+tr:hover #hovOp{
+   display: block;
+}
+.options-list{
+  display: none;
+  position: absolute;
+  left: 295px;
+  z-index: 1;
+  width: 140px;
+  background: rgb(135, 7, 7);
+  border-radius: 5px;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 8px;
+  padding: 6px 0px;
+}
+.options-list li{
+  display: flex;
+  align-items: center;
+  height: 28px;
+  cursor: pointer;
+  border-radius: 4px;
+  padding: 16px 5px;
+  /* border: 2px solid; */
+}
+.options-list li p{
+  margin: 0  10px;
+}
+.options-list li:hover{
+  background: black;
+}
+.options-list li i{
+    /* border: 2px solid; */
+    /* background: rgb(92, 92, 92) !important; */
+    margin: 0px 5px;
+    background: none !important;
+    padding: 0;
+}
+#taskName{
+  /* border: 2px solid; */
+  display: flex;
+  width: 300px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#taskName p{
+  /* border: 1px solid red; */
+   font-weight: 500;
+   color: rgb(205, 205, 205);
+   /* width: 280px; */
+   /* overflow: hidden; */
+   white-space: nowrap;
+   margin: 0;
+}
+#taskName p i{
+  cursor: pointer;
+  padding: 2px 5px;
+  color: green;
+}
+
+.opCl{
+  font-size: 12px;
+  font-weight: 500;
+  background-color: rgba(39, 133, 12, 0.847);
+  padding: 2px 5px;
+  border-radius: 4px;
+  margin-right: 8px;
+  border: none;
+  display: none;
+}
+
+#close{
+  background-color: rgb(153, 100, 51);
+  display: block;
+}
+
+.opCl:hover{
+  display: block;
+  background-color: rgba(30, 109, 9, 0.847);
+}
+#open:active{
+ background-color: rgba(16, 74, 1, 0.847);;
+}
+
+tr:hover .opCl{
+  display: block;
+}
+
+ .edit-form {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  /* height: 200px; */
+  /* height: 100%; */
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background to overlay on the entire screen */
+  z-index: 9999; /* Ensures it appears above all other content */
+  /* display: flex; */
+  /* justify-content: center;
+  align-items: center; */
+    background-color: rgb(48, 46, 46);
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+ }
+ 
+ #status{
+   width: 150px;
+   padding-left: 5px;
+  }
+  #status p{
+   /* outline: 1px solid; */
+   border-radius: 15px;
+   display: flex;
+   padding: 2px 3px 2px 9px;
+   align-items: center;
+   margin: 0;
+ }
+ .not-State{
+  background: #504d4d;
+  width: 85%;
+ }
+ .p-State{
+  background: green;
+  width: 63%;
+ }
+ .prog-State{
+  background: rgb(70, 62, 228);
+  width: 85%;
+ }
+ .dot{
+  margin-right: 5px;
+  border-radius: 99px;
+  height: 6px;
+  width: 6px;
+  background-color: white;
+ }
+
+#assignee{
+  padding-left: 10px;
+  display: flex;
+  align-items: center;
+  /* border: 2px solid red; */
+}
+#assignee p{
+  color: rgba(255, 255, 255, 0.81);
+  margin: 0px 5px;
+}
+
+#due{
+  margin: 0;
+  padding-left: 12px;
+  color: rgba(255, 255, 255, 0.81);
+
+}
+#priority{
+  width: 120px;
+  padding-left: 12px;
+}
+#priority p{
+  margin: 0;
+  text-align: center;
+  border-radius: 2px;
+  /* font-size: 13px; */
+}
+.Low{
+ width: 40px;
+ background-color: #0bad0b;
+}
+.High{
+ width: 40px;
+ background: rgb(226, 47, 47);
+}
+.Medium{
+  width: 70px;
+  background: rgb(180, 180, 45);
+}
+
+ /* // desriptio n? */
+ #descp{
+  width: 300px;
+  color: rgba(208, 208, 208, 0.81);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-weight: 400;
+  padding-left: 6px;
+ }

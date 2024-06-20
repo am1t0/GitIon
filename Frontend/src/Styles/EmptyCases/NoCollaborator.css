@@ -1,0 +1,22 @@
+#noCollaborators{
+    outline: 1px solid rgb(67, 66, 66);
+    /* background: rgb(22, 22, 22); */
+    margin: 20px 45px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    /* height: 14rem; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#noCollaborators img{
+    width: 56px;
+    height: 56px;
+}
+#noCollaborators p{
+    padding: 0px 10px 10px 10px;
+}
+#noCollaborators i{
+    font-size: 4rem;
+}

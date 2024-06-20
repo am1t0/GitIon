@@ -1,0 +1,112 @@
+.reminder{ /* about the whole reminer box */
+    width: 300px;
+    height:240px;
+    flex-shrink: 0; /* Prevent shrinking */
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    font-size: 13px;
+    font-family: 'baloo';
+    box-shadow: 0 2px 5px rgba(44, 44, 44, 0.1);
+    background: #f4f4f4;
+    transition: all 0.3s ease-in-out;
+}
+.mBox{
+    /* outline: 1px solid black; */
+    height: 70px;
+}
+.remHead{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 20px;
+    margin-bottom: 10px;
+    position: relative;
+}
+.remTag{
+    font-weight: 500;
+    color: black;
+    outline: 1px solid;
+    padding: 1px 2px;
+    border-radius: 8px;
+    background:rgb(164, 183, 164);
+}
+/* // whole copy from the long plans  */
+#dots{
+    /* background-color: black; */
+    padding: 3px;
+    color: black;
+    cursor: pointer;
+}
+#dots:hover{
+    background: rgb(222, 222, 222);
+}
+#opL{
+    /* border: 2px solid red; */
+
+    color: black;
+    background: rgb(127, 127, 127);
+    padding: 6px 8px;
+    border-radius: 2px;
+    font-size: 14px;
+    position: absolute;
+    top: 12px;
+    left: 286px;
+}
+#opL li{
+    display: flex;
+    align-items: center;
+    /* outline: 1px solid; */
+    margin: 2px 0px;
+    padding: 1px 3px;
+    cursor: pointer;
+}
+#opL li:hover{
+    background-color: rebeccapurple;
+}
+#opL li i{
+    margin: 0px 7px 0px 0px;
+}
+.remTitle h5{
+    /* outline: 1px solid rgb(255, 13, 0); */
+    margin: 3px 4px 0px 14px;
+    padding-left: 3px;
+    color: rgb(53, 53, 53);
+}
+.remDesc p{
+     color: rgb(86, 86, 86);
+     font-size: 14px;
+     font-weight: 500;
+     /* outline: 1px solid; */
+     padding-left: 18px;
+     margin-top: 5px;
+     margin-bottom: 0;
+}
+.hr{
+    /* outline: 2px solid black; */
+    display: flex;
+    justify-content: center;
+}
+hr{
+    width: 87%;
+    border-color: rgb(194, 194, 194);
+}
+
+.remFoot{
+  display: flex;
+  justify-content: space-between;
+}
+.location{
+    /* outline: 2px solid blue; */
+    width: 200px;
+    padding-left: 15px;
+}
+.location i,span{
+    color: black;
+    margin-left: 2px;
+}
+
+.timeDate p{
+   margin-bottom: 2px;
+   color: black;
+   margin-right: 20px;
+}

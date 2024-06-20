@@ -1,0 +1,91 @@
+.outerBox{
+    border: 2px solid red;
+    width: 100%;
+    display: flex;
+    /* background-color: black; */
+}
+input{
+    background-color: black;
+}
+label{
+    color: white;
+}
+.project-n-repo{
+    /* border: 2px solid blue; */
+    width: 50%;
+    /* height: 600px; */
+    box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.4);
+    margin: 10px 0px 0px 0px;
+    /* background-color: rebeccapurple; */
+}
+
+.projectForm{
+    /* border: 2px solid yellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titleDiv{
+    /* border: 2px solid; */
+    width: 100%;
+    text-align: center;
+    padding: 7px 0px 7px 0px;
+    margin-bottom: 30px;
+    background-color: rgb(180, 122, 238);
+}
+.inputs{
+    /* border: 2px solid red; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.inputs input,textarea{
+    width: 42%;
+    height: 40px;
+    border-radius: 7px;
+}
+.inputs textarea{
+    height: 100px;
+}
+
+.projectBtn{
+    /* border: 2px solid; */
+    margin-top: 15px;
+    width: 41%;
+}
+
+.repoBtn{
+   /* border: 2px solid; */
+   display: flex;
+   padding: 18px 0px;
+   width: 89%;
+   justify-content: space-evenly;
+}
+.repoBtn button{
+    width: 33%;
+}
+#repoPrivacy{
+    outline: none;
+    border: none;
+    width: 40%;
+    height: 40px;
+    box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.4);
+}
+
+label{
+    /* border: 2px solid; */
+    width: 42%;
+    margin: 0px !important;
+}
+label p{
+    color: black;
+    margin: 0px !important;
+    font-size: 17px;
+    font-weight:600;
+}
+
+.other{
+    border: 2px solid red;
+    }

@@ -1,0 +1,241 @@
+.profileLoad{
+    height: 92vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #080b0e;
+}
+.frame{
+    background: #080b0e;
+    /* border: 2px solid; */
+    width: 100%;
+    color: white;
+    display: flex;
+    /* gap: 50px; */
+    height: 92vh;
+    justify-content:space-between ;
+}
+.left-frm{
+    padding-top: 30px;
+/* border: 2px solid red; */
+display: flex;
+flex-direction: column;
+/* gap: 20px; */
+margin-left: 50px;
+width: 40%;
+}
+
+.prf-img{
+    /* border: 2px solid; */
+    height: 25vh;
+    /* width: 10%; */
+    padding-left: 20px;
+    border-radius: 10px;
+    background-image: linear-gradient(to right, rgb(2, 62, 183), rgb(158, 50, 209));
+}
+.img {
+    position: relative;
+    top: 100px;
+    width: 140px; 
+    height: 140px; 
+    border-radius: 70px;
+    background-color: #333; 
+    overflow: hidden;
+}
+
+.no-image-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 16px;
+}
+
+.img img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hoverProfile {
+    opacity: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%; /* Cover the entire width of the section */
+    height: 100%; /* Cover the entire height of the section */
+    background-color: rgba(0, 0, 0, 0.7); /* Example background color */
+    color: white;
+    padding: 10px;
+    box-sizing: border-box; /* Include padding in width and height */
+    text-align: center; /* Center text horizontally */
+    line-height: 140px; 
+    transition: all .3s ease-in-out;
+    font-size: 13px;
+}
+
+#profile-upload {
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    /* left: -9999px; */
+}
+
+.img:hover .hoverProfile {
+    opacity: 1;
+}
+
+#img-load{
+    position: relative;
+    top: 50px;
+    left: 53px;
+}
+
+
+.coreDetail{
+    /* border: 2px solid; */
+    /* height: 70vh; */
+
+    padding-left: 40px;
+    padding-top: 110px;
+}
+
+#c-info {
+    /* margin-top: 30px; */
+}
+
+#c-info li {
+    /* border: 2px solid; */
+    display: flex;
+    gap: 60px;
+    margin: 10px 0px;
+}
+.socials{
+    /* border: 2px solid; */
+    padding-left: 7px;
+    margin-top: 35px;
+    width: 32%;
+    display: flex;
+    justify-content: space-between;
+}
+.socials a{
+    background: rgb(216, 216, 216);
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 30px;
+    border-radius: 20px;
+    /* margin: 0px 10px; */
+}
+.lt{
+    border:1px solid rgb(61, 61, 61);
+    border-radius: 6px;
+    margin: 0;
+    width: 18%;
+    text-align: center;
+    font-size: 14px;
+}
+.rt{
+   margin: 0;
+   width: 60%;
+   font-size: 14px;
+}
+
+.names{
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid green; */
+    position: relative;
+    top: 38px;
+    left: 170px;
+    width: 40%;
+}
+.names h4{
+    text-align:start;
+}
+.prf-ed{
+    /* border: 2px solid; */
+    padding-top: 3px;
+    cursor: pointer;
+}
+.prf-ed i:hover{
+    color: grey;
+    /* border: 2px solid; */
+}
+.right-frm{
+   width: 50%;
+   /* border-lesft: 1px solid; */
+   overflow-y: auto;
+}
+.dv{
+    width: 1px;
+    /* height: 80vh; */
+    margin:30px;
+    background: rgb(67, 67, 67);
+}
+
+.detl{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    gap: 30px;
+    /* padding-left: 20px;
+    height: 60vh;  */
+}
+.detl section{
+    /* border: 2px solid; */
+}
+.block{
+    /* border: 2px solid; */
+    /* margin-top: 10px; */
+    padding-left: 20px;
+    margin-top: 20px;
+}
+.block p{
+    color: rgb(190, 190, 190);
+    font-size: 14px;
+    margin: 0;
+}
+#part{
+    /* color: rebeccapurple; */
+    margin-bottom: 10px;
+    background-color: rgb(34, 0, 69);
+    padding: 2px 4px;
+    color: white;
+    border-radius: 5px;
+    width: 200px;
+}
+.ln{
+    height: 1px;
+    width: 83%;
+    background: rgb(91, 91, 91);
+    /* margin: 2px 3px; */
+}
+.web-skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    /* border: 2px solid; */
+    width: 72%;
+}
+
+.web-skills span {
+    border:1px solid rgb(61, 61, 61);
+    border-radius: 6px;
+    padding: 2px;
+    background: rgb(50, 50, 50);
+    margin: 5px;
+    font-size: 13px;
+}
+
+.teams li{
+    list-style: none;
+    margin: 8px 0px;
+    font-size: 14px;
+}

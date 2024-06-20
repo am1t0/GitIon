@@ -1,0 +1,108 @@
+.header{
+    /* border: 2px solid; */
+    background-color: #182437;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 9vh;
+    /* border-bottom:1px solid rgb(61, 61, 61); */
+}
+
+.logo-hac{
+    margin-left: 30px;
+    /* border: 2px solid red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 508px;
+}
+.lg img{
+    height: 50px;
+    width: 99px;
+/* background-color: black; */
+}
+.hac{
+    margin: 0;
+    /* border: 2px solid; */
+    display: flex;
+    gap: 22px;
+    /* width: 350px; */
+}
+
+.hac p{
+    margin: 0;
+    color: rgb(126, 126, 126);
+}
+.hac p:hover{
+     color: rgb(96, 96, 96);
+}
+
+.search-btns{
+    /* border: 2px solid; */
+    display: flex;
+    align-items: center;
+    /* justify-content: space-between; */
+    width: 600px;
+    height: 50px;
+}
+.search{
+    border:1px solid rgb(103, 103, 103);
+    padding: 0px 8px;
+    border-radius: 7px;
+}
+.search i{
+    color: rgb(91, 90, 90);
+}
+.search input{
+   background: black;
+   outline: none;
+   border: none;
+   /* height: 30px; */
+   padding:3px 2px 3px 10px;
+}
+
+.btns{
+    /* border: 2px solid; */
+    display: flex;
+    margin-left: 30px;
+    justify-content: space-evenly;
+    width: 140px;
+}
+.btns span{
+    width: 50px;
+    text-align: center;
+    border-radius: 7px;
+    border:1px solid rgb(103, 103, 103);
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+.btns span:hover{
+   background:rgb(37, 37, 37);
+}
+.btns span i{
+    color: grey;
+}
+.features{
+    /* border: 2px solid; */
+    margin-left: 20px;
+    width: 70px;
+    gap: 8px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.features span i{
+    color: rgb(250, 159, 39);
+}
+
+/* .btns span i{
+    color: rgb(23, 84, 213);
+}
+#add{
+    width: 50px;
+    border:1px solid rgb(103, 103, 103);
+    border-radius: 7px;
+   
+}
+#add i{
+    color: rgb(87, 87, 87);
+} */

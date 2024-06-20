@@ -1,0 +1,161 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+/* code and pull request div and button  */
+.repoCodePullReq{
+    /* border: 1px solid; */
+    padding-top: 15px;
+    width: 13rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+#top{
+    display: flex;
+    /* border: 1px solid; */
+    /* width: 55%; */
+    padding: 20px 0px 0px 0px;
+    height: 76px;
+    color: white;
+    gap: 20px;
+    /* border:1px solid rgb(56, 55, 55); */
+}
+.bar{
+    width: 72%;
+    border:1px solid rgb(46 46 46);
+}
+.first-row{
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.line{
+    border:1px solid rgb(41 41 41);
+    width: 100%;
+}
+.codeBtn{
+    /* border: 2px solid; */
+    height: 80px;
+    width: 100px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+.codeBtn button{
+    border: none;
+    outline: none;
+    /* height: 35px;
+    width: 70px; */
+    color: white;
+    background: #079307;
+}
+.code{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    /* width: 80px; */
+    padding: 2px 8px;
+    border-radius: 7px;
+    background: #079307;
+}
+.code:hover{
+    
+}
+#codeLink{
+    margin-top: 4px;
+    display: flex;
+    justify-content: space-around;
+    /* border: 2px solid red; */
+    width: 320px;
+    height: 60px;
+    align-items: center;
+    background-color: black;
+    border-radius: 7px;
+    border:1px solid rgb(56, 55, 55);
+    padding: 0px 2px;
+}
+#codeLink h6{
+    /* background-color: rgb(255, 255, 255); */
+    margin: 0px;
+    height: 30px;
+    color: white;
+    border:1px solid rgb(56, 55, 55);
+    padding: 5px 10px;
+    border-radius: 7px;
+}
+#copy{
+    padding: 3px 7px;
+    border-radius: 3px;
+    /* border: 2px solid; */
+}
+#copy:hover{
+    background-color: rgb(47, 47, 47);
+}
+.status{
+    /* border: 2px solid red; */
+    position: relative;
+    bottom: 74px;
+    left: 251px; 
+    background-color: grey;
+    height: 30px;
+    width: 70px;
+    padding-top: 3px;
+    border-radius: 7px;
+    text-align: center;
+}
+.status p{
+    padding: 0px;
+    margin: 0px;
+}
+#commitInfo{
+    /* border: 2px solid; */
+    margin-left: 10px;
+    display: flex;
+    height: 35px;
+    border-radius: 9px;
+    align-items: center;
+    cursor: pointer; 
+}
+#commitInfo:hover{
+    background-color: rgb(40, 39, 39);
+}
+
+#commitInfo h6{
+    margin: 0px 10px;
+}
+
+
+#file-n-folders{
+    /* border: 2px solid; */
+    margin-top: 20px;
+    padding: 0px;
+    /* padding: 10px 5px; */
+    width: 65%;
+   border:1px solid rgb(56, 55, 55);
+    
+}
+#file-n-folders li{
+    list-style: none;
+}
+
+#file-n-folders li:not(:last-child){
+    border-bottom: 1px solid rgb(56, 55, 55);
+}
+
+.file-fol{
+    display: flex;
+    align-items: center;
+    padding-left: 30px;
+}
+.file-fol:hover{
+      background-color: rgb(15, 15, 15);
+}
+.file-fol p{
+    margin: 0px;
+    padding: 9px 10px;
+}
+.file-fol p:hover{
+    color: rgb(47, 47, 253);
+    cursor: pointer;
+}

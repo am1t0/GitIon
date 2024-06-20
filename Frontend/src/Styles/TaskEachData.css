@@ -1,0 +1,26 @@
+
+.dt {
+    display: flex;
+    justify-content: space-between;
+    /* border: 2px solid; */
+    gap: 15px;
+    padding: 5px;
+    border-radius: 10px;
+}
+.dt:hover{
+    background-color: rgb(98, 0, 255);
+}
+.dt i{
+    padding: 1px 7px;
+}
+.dt p {
+    margin: 0;
+    min-width: 120px;
+    font-size: 14px;
+    color: rgb(139, 138, 138);
+}
+
+#value{
+    flex: 1;
+    color: rgb(207, 207, 207);
+}

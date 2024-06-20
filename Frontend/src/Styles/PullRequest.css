@@ -1,0 +1,67 @@
+.pullRequest{
+    margin-top: 40px;
+    /* outline: 1px solid rgb(72, 72, 72); */
+}
+.pullReqList{
+    /* border: 1px solid red; */
+    padding: 10px 0px;
+}
+.upOfPull{
+     /* border: 1px solid red; */
+     /* border-bottom: 1px solid rgb(63, 63, 63); */
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     width: 50%;
+}
+.reqVar{
+    /* outline: 1px solid; */
+    /* width: 8rem;s */
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    height: 3rem;
+    /* border-bottom: 1px solid rgb(63, 62, 62); */
+}
+.reqVar p{
+    margin: 0;
+    border-radius: 3px;
+    padding: 1px 4px;
+    outline: 1px solid rgb(112, 112, 112);
+}
+.newPull button{
+  border: none;
+  background: green;
+  font-size: 14px;
+  padding: 4px 8px;
+  border-radius: 3px;
+}
+.newPull button:hover{
+    background: rgb(4, 159, 4);
+}
+.newPull button a{
+    color: rgb(255, 255, 255);
+}
+.eachPr{
+    /* outline: 1px solid rgb(80, 80, 80); */
+    padding: 4px 7px;
+    /* margin: 8px 0px; */
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.eachPr:not(:last-child){
+    border-bottom: 1px solid rgb(63, 62, 62);
+}
+.eachPr a{
+    text-decoration: none;
+}
+
+.eachPr a p{
+    margin: 0;
+    color: rgb(190, 190, 197);
+}
+.eachPr a p:hover{
+    color: rgb(53, 46, 177);
+}

@@ -1,0 +1,72 @@
+#structure{
+    width: 22%;
+    padding: 10px 8px;
+    max-height: 900px;
+    overflow-y: scroll;
+    border:1px solid rgb(46 46 46);
+}
+#brnch-n-fileSrch{
+    /* border: 2px solid; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 18px
+}
+.addf-bnch{
+    display: flex;
+    gap: 20px;
+}
+#brnch{
+    background: rgb(40, 40, 40);
+    border: 1px solid #545454;
+    border-radius: 4px;
+    width: 49%;
+    padding: 0px 10px 0px 12px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+#brnch select{
+    background: rgb(40, 40, 40);
+}
+.add{
+    background: rgb(40, 40, 40);
+    display: flex;
+    align-items: center;
+    border: 1px solid #545454;
+    padding: 0px 5px;
+    border-radius: 5px;
+}
+#file-s{
+    display: flex;
+    align-items: center;
+    border: 1px solid #545454;
+    width: 70%;
+    padding: 0px 6px;
+    border-radius: 7px;
+    gap: 6px;
+}
+#file-s input{
+    /* border: 2px solid red; */
+    background:#0D1117;
+    /* border: 1px solid #545454; */
+    outline: none;
+    width: 90%;
+    border: none;
+    border-radius: 5px;
+    padding: 4px 3px 4px 8px;
+}
+#listItem{
+    display: flex;
+    align-items: center;
+    gap: 8px ;
+    transition: all  .2s ease-in-out;
+    list-style: none;
+    padding: 6px 15px;
+    cursor: pointer;
+    border-radius: 7px;
+}
+#listItem:hover {
+   background-color: rgb(35, 35, 35);
+}
+

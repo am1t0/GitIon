@@ -1,0 +1,84 @@
+.branch-main{
+    /* border: 2px solid;  */
+    display: flex;
+}
+#branch{
+    /* border: 2px solid red; */
+    display: flex;
+    justify-content: space-around;
+}
+.branchNames{
+    display: flex;
+    padding: 0px 14px;
+    height: 35px;
+    border-radius: 5px;
+    border:1px solid rgb(56, 55, 55);
+}
+#branchSelect{
+    color: rgb(255, 255, 255);
+    background-color: black;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    /* border:1px solid rgb(56, 55, 55); */
+}
+#branchSelect option {
+    background-color: #fff;
+    color: #000;
+  }
+  #branchSelect option:checked {
+    background-color: #007bff;
+    color: #fff;
+  }
+#branchInp{
+    border:1px solid rgb(63, 62, 62);
+    /* width: rem; */
+    margin-right: 12px;
+    border-radius: 7px;
+}
+#branchInp input{
+    width: 13rem;
+    padding-left: 8px;
+    color: white;
+    outline: none;
+    /* color: white; */
+    border-radius: 9px 0px 0px 9px;
+    background-color: black;
+}
+#branchInp button{
+    border: none;
+      width: 31px;
+      height: 33px; 
+      color: white;
+      background-color: rgb(6, 120, 30);
+      border-radius: 0px 7px 7px 0px;   
+}
+#createBranch{
+    margin: 5px 0px 0px 9px;
+    color: green;
+}
+#branchInp button:hover{
+       background-color: rgb(6, 140, 35);
+}
+
+#branchNum{
+    /* border: 2px solid; */
+    margin-left: 24px;
+    padding: 7px;
+    width: 99px;
+    display: flex;
+    /* align-items: center; */
+    justify-content: space-around;
+    height: 35px;
+    border-radius: 7px;
+    cursor: pointer;
+}
+#branchNum:hover{
+    background-color: rgb(40, 39, 39);
+}
+#branchNum p{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    /* background-color: white; */
+}

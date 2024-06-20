@@ -1,0 +1,39 @@
+.todoList{
+  /* border: 1px solid rgb(235, 26, 26); */
+  border-radius: 5px;
+  margin-top: 20px;
+  width: 80%;
+
+  padding: 10px;
+}
+.labels{
+  /* border: 1px solid red; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 79%;
+  padding: 5px 0px;
+  margin-bottom: 8px;
+
+}
+.labels h6{
+  color: rgb(181, 181, 181);
+  margin: 0;
+}
+.todos{
+  /* border: 2px solid; */
+  height: 50vh;
+  overflow-y: auto;
+}
+#tk{
+  position: relative;
+  left: 50px;
+}
+#d{
+  position: relative;
+  right: 110px;
+}
+#ed{
+  position: relative;
+  right: 13px;
+}

@@ -1,0 +1,26 @@
+#task {
+    position: absolute;
+    background-color: rgb(50, 48, 50);
+    border-radius: 6px;
+    top: 70px;
+    height: 500px;
+    width: 400px;
+    z-index: 1;
+    right: -400px;
+    /* border: 1px solid #ccc; */
+    padding: 20px;
+    color: white; /* To ensure text is visible on the dark background */
+    transition: transform .7s ease;
+    /* transform: translateX(-400px); */
+}
+.slide{
+    transform: translate(-400px);
+}
+
+.taskDetail, .assigneeDetail {
+    margin-bottom: 20px;
+}
+
+.taskDetail h5, .assigneeDetail h5 {
+    margin-bottom: 10px;
+}

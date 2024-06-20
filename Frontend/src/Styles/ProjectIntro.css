@@ -1,0 +1,336 @@
+.team-intro{
+    /* outline: 1px solid; */
+    display: flex;
+    gap: 50px;
+   height: 100vh;
+   width: 100%;
+   background-color: #0D1117;
+   padding: 10px 60px;
+}
+/* data loading spinner style  */
+
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+.team{
+    /* border: 2px solid yellow; */
+    display: flex;
+    /* justify-content: center; */
+    color: white;
+}
+
+#intro-memb{
+    /* border: 2px solid; */
+    width: 40rem;
+    border-radius: 9px;
+    margin: 5px 0px 0px 5px;
+    background-color: #0D1117;
+}
+
+#intro{
+    /* border: 2px solid  green; */
+    background-color: #0D1117;
+    border-radius: 5px;
+}
+
+#intro h4,h6{
+    /* color: #ffc107; */
+    margin-top: 10px;
+    /* margin-left: 25px; */
+    /* text-align: center; */
+}
+
+#memb{
+    margin-top: 10px;
+    /* border: 1px solid rgb(59, 59, 59); */
+    border-radius: 5px;
+    padding: 10px 0px 10px 0px;
+    width: 45rem;
+    min-height: 30rem;
+    background: rgb(29, 29, 39);
+}
+#memb h5{
+    text-align: center;
+}
+#search-add{
+    /* border: 2px solid blue; */
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    padding: 10px 28px;
+}
+.sa{
+    border: 1px solid rgb(68, 67, 67);
+    display: flex;
+    border-radius: 10px;
+    height: 35px;
+    align-items: center;
+    justify-content: space-between;
+    /* box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.4); */
+    /* background-color: white; */
+}
+.sa input{
+    padding: 0px 0px 0px 11px;
+    /* height: 20px; */
+    font-size: 14px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
+
+.saLogo{
+    /* outline: 1px solid; */
+    display: flex;
+    align-items: center;
+    height: 35px;
+    padding: 0px 10px;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 1px solid rgb(70, 70, 70);
+    cursor: pointer;
+    background: rgb(8, 204, 8);
+}
+.saLogo:hover{
+    background: rgb(4, 170, 4);
+}
+.saLogo i{
+    font-size: 14px;
+}
+
+ /* ye apna sidebar ke logo  */
+.logo{
+    padding: 0px 10px 0px 10px;
+    height: 40px;
+    margin: 0px;
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+    background: rgb(125, 125, 125) !important;
+    cursor: pointer;
+    color: white;
+}
+
+.com{
+    /* border: 2px solid red; */
+    padding-left: 58px;
+    margin-top: 15px;
+    color: black;
+}
+.moreMemb{
+    /* outline: 1px solid; */
+    /* height: 16rem; */
+    background: rgb(19, 19, 40);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.moreMemb h5{
+    color: gray;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.headMembList{
+    /* outline: 1px solid; */
+    padding: 10px;
+}
+.headMembList h5{
+    margin: 0;
+}
+#teamMemb{
+    /* border: 1px solid red; */
+    min-height: 6rem;
+    overflow-y: auto;
+}
+#members{
+    /* border: 1px solid; */
+    position: relative;
+    /* width: 38em; */
+    max-height: 27rem;
+    /* padding: 1px 0px 1px 0px; */
+    /* margin-top: 19px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#eachMemb{
+    /* position: relative;   for updating options positionning */
+    outline: 1px solid rgb(69, 69, 69);
+    min-width: 38rem;
+    margin: 15px 0px;
+    padding: 20px 10px;
+    border-radius: 3px;
+    height: 2.8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.role{
+    /* outline: 1px solid; */
+    width:16rem;
+    margin-bottom: 0;
+}
+.role p{
+    margin: 0;
+}
+#roleInp{
+    /* outline: 1px solid rgb(244, 244, 244); */
+    /* background: rgb(46, 46, 46); */
+    border-radius: 2px;
+    padding: 0px 1px; 
+    width: 16rem
+}
+#roleInp input{
+    background: rgb(46, 46, 46);
+    width: 10rem;
+    border-radius: 4px;
+    color: white;
+}
+#roleInp button{
+    border: none;
+    border-radius: 4px;
+    background-color: green;
+    padding: 3px 2px;
+    margin: 0px 2px;
+}
+#roleInp button:hover{
+    background-color: rgb(4, 165, 4);
+}
+.logo-name{
+    /* outline: 1px solid; */
+    width:45%;
+    /* flex: 1; */
+}
+.logo-name a{
+    display: flex;
+    gap: 10px;
+}
+.logo-name a:hover{
+    text-decoration: none;
+}
+.logo-name a p:hover{
+   color: rgb(226, 226, 226);
+}
+.logo-name p{
+    margin: 0;
+}
+.circle a{
+    color: white;
+}
+.membMnp{
+    /* outline: 1px solid; */
+    width: 12%;
+    text-align: center;
+}
+.membMnp i{
+    cursor: pointer;
+}
+
+/* updating and modifying etc. options  */
+.updMemb{
+    /* outline: 1px solid; */
+    position: absolute;
+    border-radius: 3px;
+    right:16px;
+    top: 0;
+    padding: 2px;
+    background: rgb(66, 65, 65);
+    z-index: 1;
+}
+.updMemb p{
+    /* outline: 1px solid; */
+    margin-bottom: 4px;
+    padding: 2px 4px;
+    width: 4rem;
+    color: rgb(224, 224, 224);
+    font-size: 13px;
+}
+.updMemb p:hover{
+   background: black;
+   cursor: pointer;
+}
+.updMemb p:active{
+    background-color: rgb(42, 42, 42);
+}
+.updMemb p a{
+    color: rgb(224, 224, 224);
+}
+#admin{
+    margin: 17px 30px;
+    outline: 1px solid rgb(70, 70, 70);
+    height: 33px;
+    border-radius: 2px;
+    width: 71%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+#admin h6{
+   margin: 0px;
+   padding: 0px;
+   /* color: black; */
+}
+
+/* Animation of the arrow */
+.arrow{
+    /* transform:  rotate(-90deg); */
+    transition: all  .3s ease-in-out;
+}
+
+
+.projects{
+    outline: 1px solid rgb(73, 73, 73);  
+    width: 24rem;
+    border-radius: 4px;
+    padding: 10px;
+    margin-top: 75px;
+    height: 300px;
+}
+
+/* team project heading and create option */
+.prCr{ 
+    display: flex;
+    justify-content: space-between;
+}
+
+.prCr button{
+    border: none;
+    background: rgb(6, 159, 6);
+    font-size: 14px;
+    padding: 1px 4px;
+    border-radius: 3px;
+}
+.srchProj{
+    /* outline: 1px solid; */
+    margin-top: 3px;
+}
+.srchProj input{
+    outline: 1px solid rgb(58, 57, 57);
+    border-radius: 4px;
+    width: 100%;
+}
+
+.projList{
+    /* outline: 1px solid; */
+    margin-top: 5px;
+    padding: 2px 20px;
+    max-height: 200px;
+    overflow-y: auto;
+}
+.projList a{
+    text-decoration: none;
+}
+
+.projList li{
+    /* outline: 1px solid; */
+    border-radius: 3px;
+    padding: 2px 5px;
+    margin: 5px 0px;
+    font-size: 15px;
+    list-style: circle;
+    transition: all .2s ease-in-out;
+}
+.projList li:hover{
+    background-color: rgb(39, 39, 39);
+}

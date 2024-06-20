@@ -1,0 +1,63 @@
+#eachTodo{
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin-bottom: 26px;
+    padding-left: 10px;
+    /* justify-content: space-between; */
+    /* border: 1px solid; */
+    /* Adjust other styles as needed */
+  }
+  #eachTodo:hover{
+    background: rgb(16, 16, 16);
+  }
+  #dnud {
+     background-color: #007bff;
+  }
+  input[type=checkbox] {
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    /* appearance: none; */
+  }
+  
+  .todo-title{
+    flex-basis: 54%;
+    background: rgb(247, 247, 247);
+    border-radius: 12px;
+    font-size: 14px;
+    padding: 7px 0px;
+    color: rgb(39, 39, 39);
+    margin: 0px 12px  0px 20px;
+    padding-left: 10px;
+  }
+  
+  .todo-date {
+    color: rgb(210, 208, 208);
+    font-size: 13px;
+    /* flex-basis: 16%; Set the base width for flex items */
+    width: 60px;
+    text-align: center;
+    margin: 0px 30px 0px 30px;
+    padding: 2px;
+    outline: 1px solid rgb(93, 48, 216);
+    border-radius: 5px;
+  }
+  
+  /* here desgining the icons through which manipulation of todo happen */
+.manpTd{
+  /* border: 1px solid; */
+  width: 100px;
+}
+.manpTd i{
+  margin: 0 8px;
+  color: grey;
+  cursor: pointer;
+}
+
+#del:hover{
+ color: red;
+}
+#upd:hover{
+  color: green;
+}

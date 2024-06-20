@@ -1,0 +1,155 @@
+.plan-card {
+  width: 300px;
+  height:300px;
+  flex-shrink: 0; /* Prevent shrinking */
+  /* border: 1px solid #ddd; */
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(44, 44, 44, 0.1);
+  background: #fcfcfc;
+  transition: all 0.3s ease-in-out;
+  }
+  
+  .plan-header {
+    position: relative;    /* positioning  so the options list is relative to it */
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 5px;
+    /* background: #636363; */
+    border-radius: 4px 4px 0px 0px;
+    /* border-bottom: 1px solid #ddd; */
+  }
+  
+  .plan-tag {
+    background: #818181;
+    font-size: 13px;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 2px;
+  }
+  .view{
+    background: #233bd7;
+    font-size: 13px;
+    color: #fff;
+    padding: 1px 6px;
+    border-radius: 2px;
+    margin-left: 4px;
+    cursor: pointer;
+  }
+  .view:hover{
+    background: #3148e1;
+  }
+  
+  /* three dots  style to open options for manipulating/changings the plan */
+  #mnp{
+     color: grey;
+     /* outline: 1px solid; */
+     padding: 3px 5px;
+     display: none;
+     margin-right: 15px;
+     cursor: pointer;
+     border-radius: 2px;
+     transition: all .2s ease-in-out;
+    }
+ 
+  #mnp:hover{
+    color: #000;
+  }
+  #mnp:active{
+    background-color: rgb(153, 153, 153);
+  }
+  #mnp-2{
+    padding: 3px 5px;
+    display: inline;
+    margin-right: 15px;
+    cursor: pointer;
+    border-radius: 2px;
+    color: #000;
+    background-color: rgb(153, 153, 153);
+  }
+  #mnpOp{
+    position: absolute;
+    background: rgb(33, 33, 33);
+    border-radius: 3px;
+    list-style: none;
+    height: 100px;
+    width: 100px;
+    /* padding: 4px; */
+    padding: 9px 4px 4px 3px;
+    top: 10px;
+    right: -50px;
+  }
+
+  #mnpOp li:hover{
+    background: rgb(93, 22, 164);
+  }
+  #mnpOp i{
+     font-size: 12px;
+     margin: 0px 5px;
+  }
+  #mnpOp span{
+    font-size: 14px;
+    cursor: pointer;
+    color: rgb(209, 209, 209);
+  }
+  .plan-card:hover #mnp{
+    display: inline;
+  }
+  .plan-duration {
+    font-size: 13px;
+    color: #000000;
+    padding-right: 5px;
+  }
+  
+  .plan-image{
+    /* border: 1px solid; */
+    border-radius: 8px;
+    background: rgb(96, 3, 150);
+    text-align: center;
+  }
+  .plan-image img {
+    width: 200px;
+    height: 140px;
+    /* background: black; */
+  }
+  
+  .plan-progress {
+    display: flex;
+    justify-content: center;
+    padding: 3px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .loading-bar {
+    width: 85%;
+    background: #cacaca;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .loading-bar .progress {
+    width: 60%; /* Adjust this width to represent the actual progress */
+    height: 5px;
+    background: #28a745;
+    transition: width 0.7s ease-in-out;
+  }
+  .percentage{
+   /* // percenteage show krna hai */
+  }
+  .plan-content {
+    padding:6px 15px;
+    /* outline: 1px solid; */
+  }
+  
+  .plan-title {
+    color: #000000;
+    text-align: center;
+    margin-bottom: 8px;
+  }
+  
+  .plan-description {
+    font-size: 14px;
+    color: #000000;
+    margin-bottom: 8px;
+    text-align: center;
+  }

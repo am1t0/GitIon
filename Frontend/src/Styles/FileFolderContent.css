@@ -1,0 +1,116 @@
+#fileFolderContent{
+    width: 76%;
+    /* border: 1px solid #6e6e6e; */
+    max-height: 700px;
+    overflow: scroll;
+    border-radius: 7px;
+}
+#fileFolderContent pre{
+     color: white;
+}
+.upper-cnt{
+    border: 2px solid;
+    height: 82px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0px 20px;
+}
+.addFile{
+    /* border: 2px solid; */
+    position: relative;
+    top: 50px;
+    right: 30px;
+}
+.addFile button{
+    background-color: rgb(20, 20, 20);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 8px;
+    border:1px solid rgb(95, 95, 95);
+    width: 95px;
+    border-radius: 6px;
+}
+.addFile button h6{
+    margin-bottom: 2px;
+}
+.addFile button i{
+    transition: all .3s ease;
+}
+
+ .nor-rotate{
+    transform: rotate(-180deg);
+ } 
+.options{
+    background-color: rgb(41, 41, 41);
+    border:1px solid rgb(81, 81, 81);
+    border-radius: 5px;
+    padding: 8px;
+    transition: all .3s ease-in-out;
+}
+.options div{
+    display: flex;
+    align-items: center;
+    /* border:1px solid rgb(81, 81, 81); */
+    border-radius: 5px;
+    margin: 8px 0px;
+    padding: 2px 7px;
+    transition: all .2s ease-in-out;
+}
+.options :hover{
+   cursor: pointer;
+   background: black;
+}
+.options div p{
+    margin: 1px 4px 3px 11px;
+}
+.lover-cnt{
+    overflow: scroll;
+}
+.foldersTable {
+    width: 100%;
+    border: 1px solid #545454;
+    border-collapse: separate;
+    border-spacing: 0px;
+    border-radius: 6px;
+    table-layout: fixed;
+    overflow: unset;
+}
+
+.foldersHeading {
+    background-color: #3b3b3b;
+}
+
+.foldersHeading p {
+    padding: 10px; 
+    font-weight: bold;
+}
+.rowClass {
+    cursor: pointer;
+}
+
+.rowClass th{
+    height: 40px;
+}
+.rowClass:hover {
+    background-color: rgb(35, 35, 35);
+}
+
+.rowClass td {
+    padding: 10px; 
+    border-bottom: 1px solid #545454;
+}
+.rowClass:last-child td {
+    border-bottom: none; 
+}
+.rowClass td p{
+    margin: 0;
+}
+.last-col{
+    width: 16%;
+}
+
+#headRow th{
+    padding-left: 10px;
+}

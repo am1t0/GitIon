@@ -1,0 +1,101 @@
+.selectedPlan{
+    /* outline:  1px solid; */
+    position: absolute;
+    background: rgb(218, 218, 218);
+    z-index: 1;
+    /* top: 38px; */
+    left: 400px;
+    /* height: 400px; */
+    width: 400px;
+    padding: 10px 16px 5px 15px;
+    border-radius: 4px;
+}
+#spln{
+    text-align: center;
+    color: black;
+    margin-bottom: 3px;
+    /* outline: 1px solid; */
+}
+/* closing the info  */
+.clse button{
+   border: none;
+   background:rgb(86, 103, 110);
+   padding: 1px 4px;
+   margin-bottom: 4px;
+   border-radius: 2px;
+   font-size: 13px;
+   /* color: black; */
+}
+.clse button:hover{
+    background: rgb(89, 89, 89);
+}
+.clse button:active{
+    background-color: black;
+}
+
+/* handling plan image  */
+.plnImg{
+    /* outline: 2px solid red; */
+    background: rebeccapurple;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    padding-right: 20px;
+    margin-bottom: 5px;
+}
+.plnImg img{
+    height: 100px;
+}
+.plnPart {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 10px; 
+    font-size: 14px;
+    padding-left: 20px;
+}
+
+.plnPart h6 {
+    min-width: 100px; 
+    margin-right: 20px;
+    font-size: 14px;
+    color: rgb(0, 0, 0);
+}
+
+.plnPart p {
+    margin: 0;
+    color: rgb(0, 0, 0);
+}
+
+.plan-milestones{
+    /* outline: 1px solid; */
+    /* height: 160px; */
+    overflow-y: auto;
+    padding-left: 30px;
+    
+  }
+  .milestone{
+    /* border: 1px solid rgb(255, 255, 255); */
+    display: flex;
+    align-items: start;
+    margin-bottom: 6px;
+  }
+  input[id='milestone']{
+    cursor: pointer;
+   height: 14px;
+   margin-top: 6px;
+  }
+  .milestone p{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    margin-bottom: 0;
+    color: rgb(14, 14, 14);
+  }
+  
+/* milestones's outermost div  */
+#mlst{
+   font-size: 13px;
+}
+#mlst h6{
+    font-size: 14px;
+    color: rgb(31, 31, 31);
+}

@@ -1,0 +1,57 @@
+.mergeInstructions{
+  /* border: 1px solid; */
+  margin-top: 40px;
+}
+.compBox{
+    border: 1px solid rgb(56, 55, 55);
+    border-radius: 7px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 20px;
+    background: rgb(23, 23, 23);
+}
+.branchesToMerge{
+    border-radius: 3px;
+}
+.branchesToMerge select{
+    outline: 1px solid;
+    border-radius: 3px;
+    margin: 0px 5px;
+    height: 25px;
+    color: rgb(171, 170, 170);
+    background: rgb(58, 57, 57);
+    outline: none;
+}
+
+.branchesToMerge i{
+    margin: 0px 5px;
+    font-size: 14px;
+    color: gray;
+}
+
+.noPull{
+    /* outline: 1px solid; */
+    padding: 36px 0px;
+    margin-top: 36px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+.noPull h4,p{
+    margin-bottom: 0;
+}
+.noPull i,p{
+    color: gray;
+}
+.noPull i{
+    font-size: 18px;
+}
+
+/* when comparsion is made and compare branch is ahead  */
+.aheadComp{
+   /* outline: 1px solid; */
+   padding-top: 20px;
+}

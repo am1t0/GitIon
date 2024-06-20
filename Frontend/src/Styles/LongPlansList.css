@@ -1,0 +1,16 @@
+.longPlansList{
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+.planlist{
+  /* outline: 1px solid; */
+  display: flex;
+  align-items: center;
+  width: 75rem;
+  height: 26rem;
+  overflow-x: auto;
+  gap: 120px;
+  padding: 0px 4px;
+}

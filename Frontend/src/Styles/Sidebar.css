@@ -1,0 +1,155 @@
+.logo {
+    margin-bottom: 80px; /* Increase margin-bottom for better separation */
+    margin-left: 10px; /* Increase margin-left for better alignment */
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.logo i{
+    margin: 0px 8px ;
+}
+.logo span{
+ font-weight: bold;
+}
+.sidebar {
+    box-shadow: 0px 0px 7px rgba(93, 93, 93, 0.4);
+    height: 100vh;
+    width: 320px;
+    background-color: #181c23;
+    color: white;
+    /* border-right: 1px solid rgb(61, 61, 61); */
+    padding: 15px; /* Add padding for inner content */
+    height: auto;
+}
+.custom{           /* overriding the default bootrsap shadow to buttons */
+    box-shadow: none !important;
+    height: 27px;
+    display: flex;
+    align-items: center;
+    text-align: start;
+    padding: 13px 13px 17px 13px;
+    /* border: 1px solid; */
+    width: 189px;
+    margin: 5px 7px 0px 7px;
+}
+.custom:hover{
+    background-color: rgb(78, 11, 221);
+}
+.custom:active{
+    background-color:  rgb(60, 12, 161);
+}
+.custom h6{
+    /* border: 2px solid white; */
+    margin: 0px;
+}
+.pos{        /* positioning the child's container perfectly */
+    position: relative;
+    top: 0px;
+    left: 27px;
+    cursor: pointer;
+}
+.pos li{       /* alignment of each dimension too of child */
+    margin: 4px 0px;
+}
+
+.link{        /*router link desgin ensuring not underline comes */
+    display: flex;
+    align-items: center;
+    color: white;
+    /* border: 1px solid; */
+    text-decoration: none !important;
+}
+.link p{       /*text shown for navigating to different sections */
+    margin: 0px 5px;
+    color: grey;
+}
+.link i{
+    color: grey;
+}
+.link:hover p{
+    color: rgb(113, 36, 245);
+}
+.link:hover i{
+    color: rgb(113, 36, 245);
+}
+
+
+/* desgining the team button which is a child of team space */
+
+.teams{
+    box-shadow: none !important;         /* overriding bootrap shadow  */
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    height: 26px;
+    right: 13px;
+    border-radius: 2px !important;  /* overriding the bootstrap border-radius */
+    /* border: 1px solid; */
+}
+.teams p{
+    margin: 0px 6px;
+    color: grey;
+}
+.teams i{
+    color: grey;
+}
+
+.teams:hover p{
+   color: rgb(113, 36, 245);
+}
+.teams:hover i{
+    color: rgb(113, 36, 245);
+}
+
+/* styling the each name of team  */
+.teamName{
+    color: grey;
+}
+.teamName:hover{
+    color: gold;
+}
+
+/* fitting the user's logo in user button  */
+#user{
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+#user i{
+    padding: 1px;
+    color: #8f8ff0;
+}
+
+
+/* PROJECT KA SIDEBAR KE ELEMENT  */
+.projSList{
+  /* outline: 1px solid red; */
+  margin-top: 1.4rem;
+  padding-left: 1rem;
+}
+
+.navOP{
+    /* outline: 1px solid; */
+    padding:6px 0px 4px 8px ;
+    margin-right: 30px;
+    margin-bottom: 3px;
+    border-radius: 5px;
+    transition: all .2s ease-in-out;
+    }
+.navOP:hover{
+    background-color: rgb(78, 11, 221);
+}
+.navOP a{
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+}
+.navOP a h6{
+    margin: 0;
+}
+.navOP a i{
+    color: rgb(175, 175, 175);
+}

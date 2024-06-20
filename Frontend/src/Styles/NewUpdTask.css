@@ -1,0 +1,37 @@
+#crtUpBtn{
+    margin-left: 8px;
+    width: 70%;
+    height: 29px;
+    border: none;
+    background: rgb(95, 30, 160);
+    border-radius: 4px;
+}
+#crtUpBtn:hover{
+    background: rgb(83, 24, 143);
+}
+#crtUpBtn:active{
+    background: rgb(63, 12, 115);
+}
+input,select{
+    border: none;
+    outline: none;
+    padding-left: 14px;
+    height: 32px;
+    background: #080b0e;
+    color: rgb(95, 95, 95);
+}
+#taskNameInp{
+    width: 100%;
+    position: relative;
+}
+#stateInp{
+    width: 80%;
+    height: 32px;
+    /* color: red; */
+}
+#dueInp{
+}
+
+#priorityInp{
+    padding-left: 15px;
+}

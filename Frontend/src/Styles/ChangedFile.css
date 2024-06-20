@@ -1,0 +1,36 @@
+.diff {
+    font-family: monospace;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    border-radius: 6px;
+    padding: 0px 0px;
+    margin: 10px 3px;
+    border: 1px solid rgb(81, 77, 77);
+}
+.file-mnp{
+    background: rgb(44, 43, 43);
+    border-radius: 6px 6px 0px 0px;
+}
+.sameProp{
+    /* border: 1px solid red; */
+    color: rgb(209, 205, 205);
+    margin: 0px;
+    font-size: 13px;
+    padding: 2px 10px;
+  }
+  
+.added-line{
+    background-color: #2ea04326;
+}
+.removed-line{
+    background-color:#f8514926;
+}
+.comments{
+    color: grey;
+    padding: 1px 10px;
+    font-size: 13px;
+}
+.file-mnp{
+    border-bottom: 1px solid rgb(81, 77, 77);
+    padding: 1px 10px;
+}

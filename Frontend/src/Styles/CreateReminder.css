@@ -1,0 +1,66 @@
+.remForm{
+    background-color: rgb(36, 36, 36);
+    position: absolute;
+    z-index: 1; 
+    border: 1px solid #494949;
+    background-color: #1c1c1c;
+    border-radius: 6px;
+    width: 28%;
+    padding: 20px 20px;
+    top: 40px;
+    left: 33%;
+}
+/* reminder form heading  */
+.remFT{   
+    text-align: center;
+}
+.remInp{
+    /* border: 1px solid; */
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+.remInp label{
+    color: rgb(187, 185, 185);
+    padding: 5px 2px;
+    font-size: 14px;
+}
+.remInp input{
+    border-radius: 5px;
+    background-color: #2d2d35;
+    outline: none;
+    border: 1px solid rgb(72, 72, 72);
+    padding: 2px 8px;
+    color: rgb(201, 201, 201);
+    font-size: 14px;
+}
+.remInp input:focus{
+    border: 1px solid blue;
+}
+
+/* div conataining the time and date  */
+#tmDt{
+    display: flex;
+    justify-content: space-between;
+}
+
+#date{
+    width: 140px;
+}
+#time{
+    width: 100px;
+}
+/* submit button of reminder form  */
+.remBtn{
+    border: none;
+    background: rgb(39, 39, 239);
+    font-size: 14px;
+    border-radius: 3px;
+    margin-top: 5px;
+    padding: 2px 5px;
+}
+/* cancel button */
+.remTCancel{
+    background: black;
+    margin-right: 15px;
+}

@@ -1,0 +1,97 @@
+#todo{
+    /* outline: 1px solid red; */
+    width: 100%;
+}
+#todoContainer{
+    /* border: 1px solid rgb(63, 63, 63); */
+    /* background: white; */
+    border-radius: 3px;
+    /* height: 400px; */
+    margin: 0px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* align-items: center; */
+    /* width: 90%; */
+}
+.creation{
+    /* border: 1px solid; */
+    width: 70%;
+    margin-top: 17px;
+    /* margin-left: 10px; */
+    /* text-align: center; */
+    /* text-align: center; */
+    padding-left: 5px;
+}
+#td{
+  /* border: 1px solid rgb(11, 18, 227); */
+  width: 50%;
+  font-size: 14px;
+  background: rgb(225, 225, 225);
+  border-radius: 2px;
+}
+#du{
+    /* border: 1px solid rgb(11, 18, 227); */
+    /* font-size: 12px; */
+    padding-right: 10px;
+    margin-left: 10px;
+    border-radius: 2px;
+    background: rgb(225, 225, 225);
+    /* color: white; */
+    /* background-color: white; */
+}
+input[type="time"]::-webkit-calendar-picker-indicator {
+     /* filter: invert(100%) brightness(100%) contrast(100%); */
+}
+ 
+#crt{
+    border: none;
+    background-color:rgb(49 133 22);
+    height: 30px;
+    width: 70px;
+    border-radius: 7px;
+    margin-left: 50px;
+    padding: 0px 0px 2px 0px;
+}
+#crt:hover{
+    background-color: rgb(30, 88, 10);
+}
+
+.action{
+    position: absolute;
+    font-size: 16px;
+    /* color: grey; */
+    top: 179px;
+    left: 400px;
+    font-weight: 400;
+    opacity: 0;
+    margin: 0;
+    padding: 4px 8px;
+    transition: all 0.7s ease-in-out;
+}
+#inv{
+    opacity: 0;
+    transform: scale(.8);
+}
+#visCreate{
+    
+    color: rgb(18, 212, 18);
+    opacity: 1;
+}
+#visDel{
+    /* border: 1px solid rgb(92, 92, 92); */
+    /* border-radius: 17px; */
+    color: rgb(234, 228, 47);
+    opacity: 1;
+}
+#req{
+    /* border: 1px solid grey; */
+    color: #FF4C4C;
+    opacity: 1;
+    /* left: 437px; */
+}  
+
+#undone{
+    color: rgb(234, 228, 47);
+    opacity: 1;
+}
