@@ -14,9 +14,9 @@ export default function ProjectSidebar({setContent }) {
         </div>
         <ul className="projSList">
            <li className='navOP'>
-              <Link to={`/project/${data?.name}/${data?._id}/details`}>
+              <Link to={`/project/${data?.name}/${data?._id}`}>
               <i class="fa-solid fa-diagram-project"></i>
-             <h6>Details</h6>
+             <h6>Project</h6>
               </Link>
             </li>
             <li className='navOP'>

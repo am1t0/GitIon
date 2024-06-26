@@ -1,0 +1,55 @@
+.add-project-parts{
+    /* outline: 1px solid rgb(68, 68, 68); */
+    background:#080b0e;
+    box-shadow: 0px 0px 7px rgb(50, 50, 50);
+    position: absolute;
+    z-index: 1;
+    width: 28rem;
+    height: 4rem;
+    padding: .3rem 1rem;
+    border-radius:.3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 1;
+    animation: fadeIn 0.3s 0s;
+    animation-fill-mode: forwards;
+}
+
+.add-project-parts input{
+    /* border: 1px solid red; */
+    background: #333333;
+    width: 80%;
+    border-radius: 7px;
+    padding: 1.2rem .8rem;
+    color: white;
+}
+.add-project-parts .btns{
+    /* outline: 1px solid; */
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 100px;
+    margin: 0;
+}
+.btns .listAddDel-btn{
+    /* outline: 1px solid red; */
+    padding: .4rem;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+    transition: all .1s ease-in-out;
+}
+
+.btns .add{
+    background: rgb(94, 190, 94);
+}
+.btns .add:hover{
+    background: rgb(4, 130, 4);
+}
+.btns .cancel{
+    background: rgb(223, 63, 63);
+}
+.btns .cancel:hover{
+    background: rgb(167, 11, 11);
+}

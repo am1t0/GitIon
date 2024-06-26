@@ -1,0 +1,95 @@
+.checklist {
+    /* outline: 1px solid red; */
+    width: 26rem;
+    margin-top: 2.2rem;
+    font-family: Arial, sans-serif;
+  }
+
+  .progress-bar {
+    height: 5px;
+    background: #f0f0f0;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
+  
+  .progress {
+    height: 100%;
+    background: #038b27;
+    transition: width 0.3s ease-in-out;
+  }
+  
+  .add-item-btn{
+    border: none;
+    background: none;
+    color: #f6cd2c;
+    margin-bottom: 1rem;
+  }
+
+  .add-item-btn:hover{
+    color: #b39007;
+  }
+
+  .project-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .project-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-items: center;
+    padding:1px  3px;
+    border-bottom: 1px solid #666565;
+    margin-bottom: .3rem;
+    position: relative;
+  }
+  
+  .item-content {
+    display: flex;
+    align-items: center;
+  }
+
+  .check-or-not{
+     cursor: pointer;
+  }
+  .item-check-load {
+    width: 16px;
+    height: 16px;
+    font-size: .6rem;
+    /* margin-left: 10px; */
+  }
+  .milestone {
+    margin-left: 10px;
+  }
+  
+  .actions {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    gap: 10px;
+    transition: opacity 0.3s;
+  }
+  .edit-item,
+  .del-item{
+     cursor: pointer;
+     color: gray;
+  }
+
+  .project-item:hover .actions {
+    opacity: 1;
+  }
+  
+  .milestone{
+    color: #999;
+  }
+  .completed .milestone {
+    text-decoration: line-through;
+  }
+  .empty-message {
+    text-align: center;
+    color: #999;
+    padding: 20px 0;
+  }
+  

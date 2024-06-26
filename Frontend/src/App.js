@@ -7,6 +7,8 @@ import { Outlet} from 'react-router-dom';
 import {useDispatch ,useSelector} from 'react-redux';
 import { fetchUser } from './Data_Store/Features/userSlice';
 import { fetchProjects } from './Data_Store/Features/projectsSlice.js';
+import 'animate.css/animate.min.css';
+
 
 function App() {
   const navigate = useNavigate();

@@ -31,8 +31,8 @@ const LandingPage = () => {
     <div className='landingPage'>
       <h4>Welcome back, {data.fullname} !</h4>
       <Notifications />
-      <div className="parts">
-        <section className="personal-space">
+      <div className="parts my-4">
+        <section className="personal-space my-3">
           <h4>Personal Space</h4>
           <div className="items">
             <div className="boxes">
@@ -61,7 +61,7 @@ const LandingPage = () => {
             </div>
           </div>
         </section>
-        <section className='team-space'>
+        <section className='team-space my-3'>
           <h5>Project Space</h5>
           <div className="items">
             <div className="teamsGoto">
@@ -70,7 +70,7 @@ const LandingPage = () => {
                 <button type="button"><Link to={'/create-project'}>Create</Link></button>
               </div>
               <div className="Tsrch">
-                <input type="search" placeholder='search team..' />
+                <input type="search" placeholder='search projects...' />
               </div>
               <div className="Tlist">
                 {projects?.map((project) => {

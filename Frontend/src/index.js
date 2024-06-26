@@ -28,6 +28,7 @@ import Dashboard from './Components/Dashboard/Dashboard.js';
 import PullRequest from './Components/Project/PullRequest.js';
 import PullReqCompare from './Components/Project/PullReqCompare.js';
 import EachPullReqPage from './Components/Project/EachPullReqPage.js';
+import 'animate.css/animate.min.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

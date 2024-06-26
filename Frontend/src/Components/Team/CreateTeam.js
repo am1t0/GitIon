@@ -67,11 +67,7 @@
 //   return (
 //     <div className='teamCreate'>
 //       {/* <button>Back</button> */}
-//       <LoadingBar
-//         color='rgb(42, 42, 231)'
-//         progress={progress}
-//         onLoaderFinished={() => setProgress(0)}
-//       />
+//      
 //       <div className='teamInpBox'>
 //           <h3>Create Team</h3>
 //           <p>create team to work on your great projects with your colleagues and revolutionize the world!</p>

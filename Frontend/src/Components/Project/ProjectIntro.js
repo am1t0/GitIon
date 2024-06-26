@@ -2,13 +2,13 @@ import React, { useState, useEffect, useRef } from 'react'
 import "../../Styles/ProjectIntro.css"
 import getAccessToken from '../../Utils/auth.js';
 import { useDispatch, useSelector } from 'react-redux';
-import { fetchMemberDetails, setMemberRole } from '../../Data_Store/Features/memberSlice.js';
 import membAdd from "../../Sound/membAdd.wav"
-import empty from '../../Images/empty.png'
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import SearchUser from './SearchUser.js';
 import NoCollaborator from '../EmptyCases/NoCollaborator.js';
 import LessCollaborators from '../EmptyCases/LessCollaborators.js';
+import Date from './Date.js';
+import Checklist from './Checklist.js';
 
 
 export default function ProjectIntro() {
@@ -27,7 +27,7 @@ export default function ProjectIntro() {
   // user details
   const user = useSelector((store) => store.user.data);
 
-  const [addUser, setAddUser] = useState();
+  const [items, setItems] = useState([]);
   // state variable for the storing details of each member
   const [member, setMember] = useState([]);
   const [admin, setAdmin] = useState(null);
@@ -60,7 +60,33 @@ export default function ProjectIntro() {
   // fetching member details
   useEffect(() => {
     fetchMemberDetails(projectId);
+    fetchMilestones(projectId);
   }, [])
+
+  const fetchMilestones =async ()=>{
+    try {
+      const response = await fetch(`${process.env.REACT_APP_API_BASE_URL}/projects/${projectId}/get-milestones`, {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${getAccessToken()}`
+        },
+      });
+
+      if (!response.ok) {
+        return Promise.reject(response);
+      }
+    
+      let data = await response.json();
+      let milestones = data.milestones;
+      console.log(milestones)
+      setItems(milestones)
+
+
+    } catch (error) {
+      return error.message || "An error occurred while loading";
+    }
+  }
 
   const handleChangeRole = (memberId) => {
     setRoleShow(roleShow => roleShow === memberId ? null : memberId); // for showing input box for role change
@@ -321,12 +347,25 @@ export default function ProjectIntro() {
       {
         project && members ?
           <div className="team">
-            <div id="intro-memb">
-              <div id="intro">
+    
+              <div className="project-prog">
+               <div id="intro">
                 <h4 >Welcome to {projectName}</h4>
-                <p>{project.description} Lorem ipsum dolor sit amet.</p>
-                {/* <h6>{team?.description}</h6> */}
-              </div>
+
+                <div className="project-dates">
+                <Date label="Start Date" date="2024-06-10T08:03:44.224Z" />
+                <Date label="End Date" date="2024-07-10T08:03:44.224Z" />
+                </div>
+                 
+                <p>{project.description} Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam consequuntur asperiores nemo sunt corporis.</p>
+               </div>
+                <Checklist 
+                  items={items}  
+                  setItems={setItems}
+                />
+            </div>
+            
+            <div id="intro-memb">
               <div id="memb">
                 <div id="search-add">
                   <div className='sa'>
@@ -346,7 +385,6 @@ export default function ProjectIntro() {
 
                 </div>
                 <div className="headMembList">
-                  <h5>Project Members</h5>
                 </div>
 
                 <div id="teamMemb">
@@ -422,20 +460,19 @@ export default function ProjectIntro() {
                     <span class="sr-only">Loading...</span>
                   </div></div>}
                 </div>
-                 
-             {
-              members?.length===1 &&  <NoCollaborator/>
-             } 
-             {
-              (members?.length<=4 && members?.length>1) && <LessCollaborators/>
-             }  
+
+                {
+                  members?.length === 1 && <NoCollaborator />
+                }
+                {
+                  (members?.length <= 4 && members?.length > 1) && <LessCollaborators />
+                }
 
               </div>
 
               <div>
               </div>
             </div>
-
           </div> : <h1>Loading...</h1>
       }
     </section>

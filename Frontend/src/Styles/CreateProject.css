@@ -1,59 +1,92 @@
 .outerBox{
-    border: 2px solid red;
+    height: 100vh;
     width: 100%;
-    display: flex;
-    /* background-color: black; */
+    padding: 10px 20px;
+    background: #080b0e;
 }
-input{
-    background-color: black;
-}
-label{
-    color: white;
-}
+
 .project-n-repo{
-    /* border: 2px solid blue; */
-    width: 50%;
-    /* height: 600px; */
-    box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.4);
-    margin: 10px 0px 0px 0px;
-    /* background-color: rebeccapurple; */
+    /* border: 1px solid yellow; */
 }
 
-.projectForm{
-    /* border: 2px solid yellow; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-.titleDiv{
-    /* border: 2px solid; */
-    width: 100%;
+.projectForm {
+    max-width: 600px;
+    height: 66vh;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #121519;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .titleDiv h4 {
+    margin-bottom: 20px;
     text-align: center;
-    padding: 7px 0px 7px 0px;
-    margin-bottom: 30px;
-    background-color: rgb(180, 122, 238);
-}
-.inputs{
-    /* border: 2px solid red; */
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.inputs input,textarea{
-    width: 42%;
-    height: 40px;
-    border-radius: 7px;
-}
-.inputs textarea{
-    height: 100px;
-}
+    font-size: 24px;
+    color: #fbfbfb;
+  }
+  
+  .inputs {
+    margin-top: 30px;
+  }
+  
+  .inputs label p {
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #dddddd;
+  }
+  .inputs input[type="text"] {
+     height: 40px;
+  }
 
-.projectBtn{
-    /* border: 2px solid; */
-    margin-top: 15px;
-    width: 41%;
+  .inputs textarea{
+     height: 100px;
+  }
+
+  .inputs input[type="text"],
+  .inputs textarea 
+  {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #646262;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+  }
+  
+  .inputs input[type="text"]:focus,
+  .inputs textarea:focus {
+    border-color: #007bff;
+  }
+  
+  .submit {
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .submit input {
+    padding: 5px 10px;
+    width: 10rem;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: #fff;
+  }
+  
+  .submit input:hover {
+    background-color: #218838;
+  }
+  
+.repoForm {
+    max-width: 600px;
+    height: 85vh;
+    /* margin: 0 auto; */
+    padding: 20px;
+    background-color: #121519;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 .repoBtn{
@@ -68,10 +101,11 @@ label{
 }
 #repoPrivacy{
     outline: none;
-    border: none;
+    border: 1px solid #646262;
+    border-radius: 5px;
+    display: block;
     width: 40%;
     height: 40px;
-    box-shadow: 0px 0px 8px rgba(93, 93, 93, 0.4);
 }
 
 label{
@@ -81,7 +115,7 @@ label{
 }
 label p{
     color: black;
-    margin: 0px !important;
+    /* margin: 0px !important; */
     font-size: 17px;
     font-weight:600;
 }
