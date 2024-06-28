@@ -1,7 +1,7 @@
 import {Router } from "express";
 import { upload } from "../middlewares/multer.middleware.js";
 import { veryfyJWT } from "../middlewares/auth.middleware.js";
-import {createProject,removeMemberFromProject,removeAfterDeclination,setRoleForMember,addMemberToProject,invitationToUser,addTaskToProject,getAllmembers,getProjectsForUser , repoCheck, getProject, getCurrentProject,uploadTheme} from "../controllers/projects.controller.js"
+import {createProject,deleteMilestone,checkMilestone ,getAllMilestones,addMilestoneToProject,removeMemberFromProject,removeAfterDeclination,setRoleForMember,addMemberToProject,invitationToUser,addTaskToProject,getAllmembers,getProjectsForUser , repoCheck, getProject, getCurrentProject,uploadTheme} from "../controllers/projects.controller.js"
 
 
 const router = Router();
@@ -29,6 +29,14 @@ router.route('/members/:projectId').get(veryfyJWT,getAllmembers)
 router.route('/:projectId').get(veryfyJWT,getProject);
 
 router.route('/currProject/:projectId').get(veryfyJWT,getCurrentProject)
+
+router.route('/:projectId/add-milestone').post(veryfyJWT,addMilestoneToProject)
+
+router.route('/:projectId/:milestoneId/delete').delete(veryfyJWT,deleteMilestone)
+
+router.route('/:projectId/:milestoneId/completed').post(veryfyJWT,checkMilestone );
+
+router.route('/:projectId/get-milestones').get(veryfyJWT,getAllMilestones)
 
 router.route('/theme-upload/:projectId').post(veryfyJWT,upload.single('theme'),uploadTheme)
 

@@ -14,6 +14,14 @@ const projectSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  startDate:{
+     type:Date,
+     required:false,
+  },
+  endDate:{
+    type:Date,
+    required:false,
+  },
   repo: {
       repoName: {
         type: String,
@@ -40,6 +48,17 @@ const projectSchema = new mongoose.Schema({
     }
   }],
 
+  projectMilestones:[{
+    mileStone:{
+      type: String,
+      default: null,
+    },
+    completed:{
+      type:Boolean,
+      default: false
+    }
+  }]
+  ,
   repoInitialized: {
     type: Boolean,
     default: false,

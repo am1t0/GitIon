@@ -2,12 +2,13 @@ import {Router } from "express";
 import {upload} from '../middlewares/multer.middleware.js'
  import { veryfyJWT } from "../middlewares/auth.middleware.js";
 import { registerUser,loginUser,getAllUsers,logoutUser,getProfileDetail,refreshAccessToken, getUserData ,getGitToken,updateUser,uploadPhoto} from "../controllers/user.controller.js";
+import handleError from "../middlewares/error.middleware.js";
 
 const router = Router();
 
 router.route("/register").post(registerUser)
 
-router.route("/login").post(loginUser);
+router.route("/login").post(loginUser,handleError);
 
 // secured routes 
 router.route("/logout").post(

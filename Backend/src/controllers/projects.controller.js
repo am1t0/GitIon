@@ -127,8 +127,6 @@ const repoCheck = asyncHandler(async (req, res) => {
       owner: owner,
     };
 
-    console.log('Project after repo Details is : ',project);
-
     // Update the project to indicate that the repository has been initialized
     project.repoInitialized = true;
 
@@ -467,5 +465,149 @@ const setRoleForMember = asyncHandler(async (req, res) => {
   }
 });
 
+// add milestones of project that has to be achieved
+const addMilestoneToProject = asyncHandler(async (req, res) => {
+  const { projectId } = req.params;
+  const { mileStone,completed} = req.body;
 
-export { createProject ,removeMemberFromProject,setRoleForMember,removeAfterDeclination,addMemberToProject,invitationToUser,getProjectsForUser,getAllmembers, getCurrentProject,addTaskToProject,repoCheck,getProject,uploadTheme};
+  // Validate required fields
+  if (!mileStone){
+    return res.status(400).json({ success: false, message: "All fields are required" });
+  }
+
+  try {
+    // Find the project by ID
+    const project = await Project.findById(projectId);
+
+    if (!project) {
+      return res.status(404).json({ success: false, message: "Project not found" });
+    }
+
+    // Assuming req.user._id is the ID of the current authenticated user
+    if (project.owner.toString() !== req.user._id.toString()) {
+      return res.status(401).json({ success: false, message: "Unauthorized!" });
+    }
+
+    // Create a new milestone object
+    const newMilestone = {
+      mileStone,
+      completed,
+    };
+
+    // Add the new milestone to the project's milestones array
+    project.projectMilestones.push(newMilestone);
+
+    // Save the updated project to the database
+    const updatedProject = await project.save();
+
+    return res.status(201).json({
+      success: true,
+      project: updatedProject,
+      milestone: newMilestone,
+    });
+  } catch (error) {
+    console.error("Error adding milestone to project:", error.message);
+    return res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+});
+
+
+const getAllMilestones =  asyncHandler(async (req, res) => {
+  const { projectId } = req.params;
+
+  try {
+    // Find the project by ID
+    const project = await Project.findById(projectId);
+
+    if (!project) {
+      return res.status(404).json({ success: false, message: "Project not found" });
+    }
+
+    const milestones = project.projectMilestones;
+
+    return res.status(201).json({
+      milestones
+    });
+  } catch (error) {
+    console.error("Error adding milestone to project:", error.message);
+    return res.status(500).json({ success: false, message: "Internal Server Error" });
+  }
+});
+
+const deleteMilestone = asyncHandler(async (req, res) => {
+  const { projectId, milestoneId } = req.params;
+
+  try {
+    // Find the project by its ID
+    const project = await Project.findById(projectId);
+
+    if (!project) {
+      return res.status(404).json({ message: 'Project not found' });
+    }
+
+      // Assuming req.user._id is the ID of the current authenticated user
+      if (project.owner.toString() !== req.user._id.toString()) {
+        return res.status(401).json({ success: false, message: "Unauthorized!" });
+      }
+
+    // Find the milestone by its ID and remove it from the milestones array
+    const milestoneIndex = project.projectMilestones.findIndex(m => m._id.toString() === milestoneId.toString());
+    
+    if (milestoneIndex === -1) {
+      return res.status(404).json({ message: 'Milestone not found' });
+    }
+
+    project.projectMilestones.splice(milestoneIndex, 1);
+
+
+    // Save the updated project
+    await project.save();
+
+    res.status(200).json({ message: 'Milestone deleted successfully' });
+  } catch (error) {
+    res.status(500).json({ message: 'Server error', error: error.message });
+  }
+});
+
+const checkMilestone = asyncHandler(async (req, res) => {
+  const { milestoneId,projectId } = req.params;
+
+  
+  try {
+    if (!milestoneId || !projectId) {
+      return res.status(400).json({ success: false, message: "Milestone ID is required" });
+    }
+    // Find the project that contains the milestone
+    const project = await Project.findById(projectId);
+    
+    if (!project) {
+      
+      return res.status(404).json({ success: false, message: "Milestone not found" });
+    }
+    // Assuming req.user._id is the ID of the current authenticated user
+    if (project.owner.toString() !== req.user._id.toString()) {
+      return res.status(401).json({ success: false, message: "Unauthorized!" });
+    }
+    
+    // Find the milestone within the project's milestones array
+    const milestone = project.projectMilestones.id(milestoneId);
+
+    if (!milestone) {
+      return res.status(404).json({ success: false, message: "Milestone not found" });
+    }
+
+    // Update the completed attribute of the milestone to true
+    milestone.completed = !milestone.completed;
+
+    // Save the updated project
+    await project.save();
+
+    res.status(200).json({ success: true, message: "Milestone marked as completed", milestone });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ success: false, message: "Server error", error: error.message });
+  }
+});
+
+
+export { checkMilestone ,deleteMilestone,addMilestoneToProject,getAllMilestones,createProject ,removeMemberFromProject,setRoleForMember,removeAfterDeclination,addMemberToProject,invitationToUser,getProjectsForUser,getAllmembers, getCurrentProject,addTaskToProject,repoCheck,getProject,uploadTheme};
