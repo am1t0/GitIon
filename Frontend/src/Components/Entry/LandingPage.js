@@ -6,7 +6,7 @@ import Notifications from './Notifications';
 const LandingPage = () => {
   const navigate = useNavigate();
 
-  const { data, isLoading } = useSelector((store) => store.user);
+  const { user, isLoading } = useSelector((store) => store.user);
   const projects = useSelector((store) => store.projects.data?.data);
 
   const upper = (name) => {
@@ -27,9 +27,10 @@ const LandingPage = () => {
   }
 
   return (
-    data &&
+    user &&
+
     <div className='landingPage'>
-      <h4>Welcome back, {data.fullname} !</h4>
+      <h4>Welcome back, {user.fullname} !</h4>
       <Notifications />
       <div className="parts my-4">
         <section className="personal-space my-3">

@@ -1,9 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect} from 'react';
 import { useSelector } from 'react-redux';
 import Sidebar from './Sidebar';
 import { Outlet } from 'react-router-dom';
-import Login from './Login';
-import { useDispatch } from 'react-redux';
+
 import { useNavigate } from 'react-router-dom';
 
 
@@ -16,13 +15,14 @@ const Home = () => {
     if (isError) {
       navigate('/login'); 
     }
-  }, [isLoading, isError, navigate]);
+  }, [isError]);
 
   if (isLoading) {
     return <h1>Loading...</h1>;
   }
 
   return (
+    !isLoading &&
     <div style={{ display: 'flex' }}>
       <Sidebar />
       <Outlet />

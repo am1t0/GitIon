@@ -11,9 +11,13 @@
     align-items: center;
     gap: 9px;
 }
-#notAccount h6{
-    /* margin: 0; */
+#switch{
+    cursor: pointer;
 }
+#switch:hover{
+    color: #a4a4a4;
+}
+
 .account{
     /* border: 2px solid red; */
     display: flex;
@@ -21,11 +25,19 @@
     background-color:#0D1117;
     color: white;
     padding-bottom: 100px;
+    height: 100vh;
 }
+
+.register {
+    height: 100%;
+    padding-bottom: 39rem;
+}
+
 .content{
     /* border: 2px solid !important; */
-    /* border-radius: 7px; */
-    margin-top: 20px;
+    border-radius: 7px;
+    /* background: rgb(157, 69, 2); */
+    margin-top: 3em;
     width: 35%;
     display: flex;
     flex-direction: column;
@@ -33,14 +45,13 @@
     border-width: 0.0625rem;
     border-color: #414851;
     border-style: solid;
-    height: 85%;
-    padding-bottom: 30px;
+    /* height: 85%; */
 }
+
 .form{
     /* border: 2px solid red; */
     display: flex;
     margin-top: 5px;
-    /* justify-content: center; */
     align-items: center;
     flex-direction: column;
     width:100%;
@@ -72,6 +83,15 @@
   border: 2px solid rgb(41, 41, 186);
 }
 
+.error{
+   color: rgb(248, 30, 30);
+   opacity: 0;
+   transition: opacity .2s ease-in-out;
+}
+#error-show {
+    opacity: 1;
+}
+
 .social-divider{
     margin-top: 20px;
     width: 65%;
@@ -83,6 +103,20 @@
 .social-divider span{
     background-color:#0D1117;
     padding: 0 10px;
+    color: white;
+}
+
+.submit-auth{
+    background-color: rgb(209, 179, 11);
+    width: 120px;
+    padding: 6px 0;
+    margin-top: 10px;
+    border-radius: 3px;
+    color: black;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: rgb(172, 147, 4);
 }
 
 #social-accnt{

@@ -7,7 +7,6 @@ import github from '../Images/github.png';
 import linkedin from '../Images/linkedin.png'
 import email from '../Images/gmail.png';
 import ProfileEditForm from './ProfileEditForm';
-import { fetchUser } from '../Data_Store/Features/userSlice';
 
 export default function Profile() {
   const dispatch = useDispatch();
@@ -46,10 +45,10 @@ export default function Profile() {
 
         if (response.ok) {
             console.log('File uploaded successfully');
-            dispatch(fetchUser()).then(()=>{
-              setImgLoading(false);
+            // dispatch(fetchUser()).then(()=>{
+            //   setImgLoading(false);
 
-            })
+            // })
 
             
         } else {

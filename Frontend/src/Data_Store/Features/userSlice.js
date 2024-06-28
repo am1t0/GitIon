@@ -27,8 +27,7 @@ const userSlice = createSlice({
     name : 'user',
     initialState:{
         isLoading: true,
-        data : null,
-        isLoggin: false,
+        user : null,
         isError: false,
     },
     extraReducers: (builder)=>{
@@ -39,12 +38,10 @@ const userSlice = createSlice({
         })
         builder.addCase(fetchUser.fulfilled, (state,action)=>{
             state.isLoading = false;
-            state.isLoggin = true;
-            state.data = action.payload;
+            state.user = action.payload;
         }) 
         builder.addCase(fetchUser.rejected, (state,action)=>{
             state.isLoading = false;
-            state.isLoggin = false;
             state.isError = true;
         })
         

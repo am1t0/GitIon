@@ -2,41 +2,43 @@ import './App.css';
 import Footer from './Components/Common/Footer';
 import Header from './Components/Common/Header';
 import { useEffect} from 'react';
-import {useNavigate} from 'react-router-dom';
 import { Outlet} from 'react-router-dom';
 import {useDispatch ,useSelector} from 'react-redux';
 import { fetchUser } from './Data_Store/Features/userSlice';
 import { fetchProjects } from './Data_Store/Features/projectsSlice.js';
 import 'animate.css/animate.min.css';
+import Spinner from './Components/Common/Spinner.js';
+import AppContent from './Components/Entry/AppContent.js';
+import Authorize from './Components/Entry/Authorize.js';
+import Login from './Components/Login.js';
 
 
 function App() {
-  const navigate = useNavigate();
+
   const dispatch = useDispatch();
   
-  const { isLoading, isError } = useSelector((store) => store.user);
-
+  //fetching user and all it's associated project's data
   useEffect(() => {
     dispatch(fetchUser());
+    
     dispatch(fetchProjects());
   }, [dispatch]);
-
-  useEffect(() => {
-    if (isError) {
-      navigate('/login'); 
-    }
-  }, [isLoading, isError, navigate]);
-
-  if (isLoading) {
-    return <h1>Loading...</h1>;
-  }
+  
+  const { isLoading , isError } = useSelector((store) => store.user);
 
   return (
-    <div>
-      <Header />
-      <Outlet />
-      <Footer />
-    </div>
+    isLoading ? <Spinner/>     // showing spiner on load
+    
+    : isError ? (              // checking if any error in fetching user data
+
+         <Authorize/>          // sending user to register/login himself
+       )
+         :(                    // if user is authorized then show content
+       <AppContent>          
+          <Header/>
+          <Outlet/>
+          <Footer/>
+      </AppContent>)
   );
 }
 

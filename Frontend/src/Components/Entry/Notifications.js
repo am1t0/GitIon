@@ -4,7 +4,7 @@ import getAccessToken from '../../Utils/auth';
 
 export default function Notifications() {
     // user's data from store
-    const user = useSelector((store)=> store.user.data);
+    const { user } = useSelector((store)=> store.user);
 
     //invitations 
     const [invitations,setInvitations] = useState([])

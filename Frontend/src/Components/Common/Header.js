@@ -6,17 +6,16 @@ import logo from '../../Images/lg.png'
 
 export default function Header() {
 
-  const {data,isError,isLoggin} = useSelector((store)=> store.user);
+  const {user} = useSelector((store)=> store.user);
 
   return (
-    data && 
     <header className="header">
          <div className="logo-hac">
             <div className="lg">
              <img src={logo} alt="" />
             </div>
             <div className="hac">
-             { data && <Link to='/'><p>Home</p></Link> }
+              <Link to='/'><p>Home</p></Link> 
               <Link to='/'><p>About</p></Link>
               <Link to='/'><p>Contact</p></Link>
               <Link to='/'><p>Help</p></Link>
@@ -28,14 +27,13 @@ export default function Header() {
            <i class="fa-solid fa-magnifying-glass" aria-hidden="true"  ></i>
              <input type="search" placeholder='Search'/>
            </div>
-            { data && <div className="btns">
+             <div className="btns">
              <span id='add'><i class="fa-solid fa-plus"></i></span>
              <div className="features">
-             <Link to={`/profile/${data?.username}`}><span><i class="fa-solid fa-user"></i></span></Link>
+             <Link to={`/profile/${user?.username}`}><span><i class="fa-solid fa-user"></i></span></Link>
              <span><i class="fa-solid fa-moon"></i></span>
              </div>
            </div>
-}
          </div>
     </header>
   );

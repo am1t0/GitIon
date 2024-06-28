@@ -41,8 +41,6 @@ const router = createBrowserRouter([
         { path: '/dashboard', element: <Dashboard /> },
         {path:'/create-project',element: <CreateProject/>}
       ]},
-      {path:'/register',element: <RegisterPage/>},
-      {path:"/login",element:<Login /> },
 
       {path:'/project/:projectName/:projectId',element:<Project/>,
      

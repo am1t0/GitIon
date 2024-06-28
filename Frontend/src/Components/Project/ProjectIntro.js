@@ -25,7 +25,7 @@ export default function ProjectIntro() {
 
 
   // user details
-  const user = useSelector((store) => store.user.data);
+  const {user} = useSelector((store) => store.user);
 
   const [items, setItems] = useState([]);
   // state variable for the storing details of each member

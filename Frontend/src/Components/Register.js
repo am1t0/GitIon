@@ -2,10 +2,12 @@ import React, { useRef } from 'react'
 import { useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
+import { fetchUser } from '../Data_Store/Features/userSlice';
 
-const RegisterPage = () => {
+const RegisterPage = ({setForm}) => {
 
-  const navigate = useNavigate();
+  const dispatch = useDispatch();
+
   const  emailRef = useRef();
   const  fullnameRef = useRef();
   const  passwordRef = useRef();
@@ -64,7 +66,8 @@ const RegisterPage = () => {
 
       localStorage.setItem('access_token', accessToken);
 
-      navigate('/Home');
+      window.location.reload()  // reloading site
+
     } catch (error) {
       // Handle registration error
       console.error("Registration failed:", error.message);
@@ -87,12 +90,12 @@ const RegisterPage = () => {
 
   return (
     <div className='account'>
-      <div className="content">
+      <div className="content register">
         <div className="regLog">
          <h2>Create your account</h2>
          <div id="notAccount">
             <h5>Have an account? </h5>
-            <Link to='/login'><h5>Log in</h5></Link>
+            <h5 onClick={()=> setForm('login')} id='switch'>Sign In</h5>
          </div>
         </div>
       <form className='form' onSubmit={handleRegister}>
@@ -128,11 +131,7 @@ const RegisterPage = () => {
           <input type="password" required ref={passwordRef}  placeholder='password'/>
         </div>
         
-        <button 
-        className='btn btn-warning my-4'
-        type="submit" >
-          Register
-        </button>
+         <input type="submit" className='submit-auth' />
 
       </form>
       

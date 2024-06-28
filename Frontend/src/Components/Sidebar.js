@@ -9,7 +9,7 @@ import userSlice from '../Data_Store/Features/userSlice';
 
 export default function Sidebar({handleTeamCreated }) {
   
-  const user = useSelector((store)=>store.user.data);     // user for navigating to it's profile 
+  const {user} = useSelector((store)=>store.user);     // user for navigating to it's profile 
 
   const navigate = useNavigate();   
 
@@ -26,9 +26,8 @@ export default function Sidebar({handleTeamCreated }) {
   // list of all projects for user
   const projects = useSelector((store)=> store.projects.data?.data);
 
-
   return (
-   <div className="sidebar">
+ user &&  <div className="sidebar">
   <div className="logo">
     <i className="fab fa-github"></i>
     <span>Gittion</span>
@@ -44,7 +43,7 @@ export default function Sidebar({handleTeamCreated }) {
       <div className="collapse" id="user-collapse">
         <ul className="list-unstyled pos">
           <li>
-            <Link to={`/profile/${user?.fullname}`} className='link'>       {/* navigating to the profile of user  */}
+            <Link to={`/profile/${user?.username}`} className='link'>       {/* navigating to the profile of user  */}
             <i class="fa-solid fa-user"></i>
               <p>profile</p>
             </Link>
@@ -106,7 +105,10 @@ export default function Sidebar({handleTeamCreated }) {
               <ul className="pos list-unstyled">
                 {projects?.map((project) => (
                   <li onClick={()=> handleProjectClick(project)} key={project._id}  className='teamName'>{project.name}</li>
-                ))}
+                 
+                )
+                )
+                }
               </ul>
             </div>
           </li>
